@@ -1,9 +1,10 @@
-package com.datadjinn.todoapp
+package com.datadjinn.todoapp.ui.viewmodel
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.datadjinn.todoapp.application.MainApplication
+import com.datadjinn.todoapp.data.model.Todo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.time.Instant

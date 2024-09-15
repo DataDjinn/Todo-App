@@ -1,4 +1,4 @@
-package com.datadjinn.todoapp
+package com.datadjinn.todoapp.ui.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -34,6 +34,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.datadjinn.todoapp.R
+import com.datadjinn.todoapp.data.model.Todo
+import com.datadjinn.todoapp.ui.viewmodel.TodoViewModel
 import java.text.SimpleDateFormat
 import java.util.Locale
 

@@ -1,4 +1,4 @@
-package com.datadjinn.todoapp
+package com.datadjinn.todoapp.database
 
 import androidx.room.TypeConverter
 import java.util.Date

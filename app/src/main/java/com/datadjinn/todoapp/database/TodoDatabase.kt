@@ -1,8 +1,10 @@
-package com.datadjinn.todoapp
+package com.datadjinn.todoapp.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.datadjinn.todoapp.data.model.Todo
+import com.datadjinn.todoapp.data.dao.TodoDao
 
 @Database(
     entities = [Todo::class],

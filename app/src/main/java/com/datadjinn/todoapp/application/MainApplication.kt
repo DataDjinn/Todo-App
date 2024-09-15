@@ -1,7 +1,8 @@
-package com.datadjinn.todoapp
+package com.datadjinn.todoapp.application
 
 import android.app.Application
 import androidx.room.Room
+import com.datadjinn.todoapp.database.TodoDatabase
 
 class MainApplication : Application() {
     companion object {
