@@ -2,10 +2,15 @@ package com.datadjinn.todoapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+// Teal Shades
+val TealPrimary = Color(0xFF00796B) // Teal
+val TealSecondary = Color(0xFF004D40) // Darker Teal
+val TealTertiary = Color(0xFFB2DFDB) // Light Teal
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+// Background and Surface
+val LightGreyBackground = Color(0xFFF5F5F5) // Very Light Grey Background
+
+// White Surface
+val WhiteSurface = Color(0xFFFFFFFF) // White surface for contrast
+
+

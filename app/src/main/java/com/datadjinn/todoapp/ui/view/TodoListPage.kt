@@ -1,31 +1,13 @@
 package com.datadjinn.todoapp.ui.view
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.imePadding
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -34,6 +16,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.text.font.FontWeight
 import com.datadjinn.todoapp.R
 import com.datadjinn.todoapp.data.model.Todo
 import com.datadjinn.todoapp.ui.viewmodel.TodoViewModel
@@ -46,11 +29,25 @@ fun TodoListPage(viewModel: TodoViewModel) {
     var inputText by remember {
         mutableStateOf("")
     }
+
     Column(
         modifier = Modifier
             .fillMaxHeight()
+            .statusBarsPadding()  // Add padding for the notch
             .padding(8.dp)
     ) {
+        Text(
+            text = "TimeTodo",
+            fontSize = 32.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            textAlign = TextAlign.Center
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))  // Space between app name and todo list
+
         Box(modifier = Modifier.weight(1f)) {
             todoList?.let {
                 LazyColumn(
@@ -73,11 +70,11 @@ fun TodoListPage(viewModel: TodoViewModel) {
                 text = "No Todos"
             )
         }
-        // Input section at the bottom of the screen
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .imePadding() // Ensures content moves up when the keyboard appears
+                .imePadding()  // Ensures content moves up when the keyboard appears
                 .padding(8.dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
@@ -94,6 +91,7 @@ fun TodoListPage(viewModel: TodoViewModel) {
                 Text(text = "Add")
             }
         }
+
         Spacer(modifier = Modifier.height(12.dp))
     }
 }
@@ -115,7 +113,7 @@ fun TodoItem(item: Todo, onDelete: () -> Unit) {
         ) {
             Text(
                 text = SimpleDateFormat(
-                    "HH:mm aa, dd/mm/yyyy",
+                    "HH:mm aa, dd/MM/yyyy",
                     Locale.ENGLISH
                 ).format(item.createdAt),
                 fontSize = 12.sp,

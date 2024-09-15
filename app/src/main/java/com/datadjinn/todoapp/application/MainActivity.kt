@@ -8,9 +8,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.ViewModelProvider
+import com.datadjinn.todoapp.ui.theme.TodoAppTheme
 import com.datadjinn.todoapp.ui.view.TodoListPage
 import com.datadjinn.todoapp.ui.viewmodel.TodoViewModel
-import com.datadjinn.todoapp.ui.theme.TodoAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
