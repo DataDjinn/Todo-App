@@ -70,7 +70,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.androidx.runtime.livedata)
 
-     // val room_version = "2.6.1"
+    // val room_version = "2.6.1"
 
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
@@ -78,4 +78,6 @@ dependencies {
     // To use Kotlin annotation processing tool (kapt)
     // noinspection KaptUsageInsteadOfKsp
     kapt(libs.androidx.room.compiler)
+
+    implementation (libs.androidx.ui.text.google.fonts)
 }
